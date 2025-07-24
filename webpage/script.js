@@ -15,6 +15,9 @@ function updateTime() {
 
 function updateVerse(hour, minute) {
   const verseEl = document.getElementById('verse');
+  const verseTextEl = document.getElementById('verse-text');
+  const verseRefEl = document.getElementById('verse-ref');
+
   const filename = `../verses/chapter${hour}_verse${minute}.json`;
 
   // Fade out verse
@@ -31,19 +34,22 @@ function updateVerse(hour, minute) {
       .then(data => {
         if (data.length > 0) {
           const randomVerse = data[Math.floor(Math.random() * data.length)];
-          verseEl.textContent = `${randomVerse.text} ${randomVerse.book} ${hour}:${minute}`;
+          verseTextEl.textContent = `${randomVerse.text}`;
+          verseRefEl.textContent = `- ${randomVerse.book} ${randomVerse.chapter}:${randomVerse.verse}`;
         } else {
-          verseEl.textContent = ""; //empty verse for top of the hour since there are no verses at 0
+          verseTextEl.textContent = ""; //Empty verse for top of the hour since there is no verse 0
+          verseRefEl.textContent = "";
         }
       })
       .catch(err => {
-        verseEl.textContent = "Verse not available.";
+        verseTextEl.textContent = "Verse not available.";
+        verseRefEl.textContent = "";
         console.error(err);
       })
       .finally(() => {
         verseEl.style.opacity = 1;
       });
-  }, 500); // Match CSS transition
+  }, 500);
 }
 
 // Initial run
