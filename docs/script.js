@@ -18,7 +18,7 @@ function updateVerse(hour, minute) {
   const verseTextEl = document.getElementById('verse-text');
   const verseRefEl = document.getElementById('verse-ref');
 
-  const filename = `verses/chapter${hour}_verse${minute}.json`;
+  const filename = `chapter${hour}_verse${minute}.json`;
 
   // Fade out verse
   verseEl.style.opacity = 0;
