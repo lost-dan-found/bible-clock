@@ -1,6 +1,6 @@
 # bible-clock
 
-Simple webpage that displays a Bible verse corresponding to the time. I.e. 3:26 pm is John 3:26
+Simple webpage that displays a Bible verse corresponding to the time. I.e. 3:16 PM is John 3:16
 
 ![screenshot](images/markdown.png)
 
