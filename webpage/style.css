@@ -22,14 +22,12 @@ body {
   width: 100%;
   text-align: center;
   font-size: 8em;
-  opacity: 1;
-  transition: opacity 0.5s ease;
 }
 
 #verse {
   position: absolute;
-  bottom: 20%;
-  right: 10%;
+  bottom: 15%;
+  right:10%;
   max-width: 40%;
   font-size: 2.5em;
   text-align: right;
