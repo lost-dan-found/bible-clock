@@ -49,7 +49,7 @@ function updateVerse(hour, minute) {
       .finally(() => {
         verseEl.style.opacity = 1;
       });
-  }, 500);
+  }, 1000);
 }
 
 // Initial run
