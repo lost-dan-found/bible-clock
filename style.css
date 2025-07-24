@@ -1,0 +1,47 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: sans-serif;
+  background-image: url('images/background.png'); /* Adjust path as needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+  position: relative;
+}
+
+#time {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  font-size: 8em;
+}
+
+#verse {
+  position: absolute;
+  bottom: 15%;
+  right: 10%;
+  max-width: 40%;
+  text-align: right;
+  font-size: 2.5em;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+#verse-text {
+  margin-bottom: 0.5em;
+}
+
+#verse-ref {
+  font-style: italic;
+  font-size: 0.9em;
+  color: #ddd;
+}
+
